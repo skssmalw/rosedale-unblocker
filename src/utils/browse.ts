@@ -43,18 +43,18 @@ Object.entries(elements).forEach(([key, path]) => {
       console.debug('[DEBUG] Navigating to ' + path);
       if (frame) frame.src = path as string;
       if (path === './ap') {
-        input.value = 'lunar://apps';
+        input.value = 'Vanity://apps';
         copy.style.right = '40px';
         clear.style.right = '10px';
         clear.classList.remove('hidden');
       } else if (path === './gm') {
-        input.value = 'lunar://games';
+        input.value = 'Vanity://games';
 
         copy.style.right = '40px';
         clear.style.right = '10px';
         clear.classList.remove('hidden');
       } else if (path) {
-        input.value = 'lunar://settings';
+        input.value = 'Vanity://settings';
 
         copy.style.right = '40px';
         clear.style.right = '10px';
@@ -73,9 +73,9 @@ if (copy) {
     if (!path.startsWith('/p/') && !path.startsWith('/scram/')) {
       try {
         const clipboardMap: Record<'/gm' | '/ap' | '/s', string> = {
-          '/gm': 'lunar://games',
-          '/ap': 'lunar://apps',
-          '/s': 'lunar://settings',
+          '/gm': 'Vanity://games',
+          '/ap': 'Vanity://apps',
+          '/s': 'Vanity://settings',
         };
 
         if (clipboardMap[path as '/gm' | '/ap' | '/s']) {
