@@ -91,7 +91,7 @@ mainForm.addEventListener('submit', async (event) => {
 
   const inputVal = inputField.value.trim();
 
-  if (inputVal.startsWith('lunar://')) {
+  if (inputVal.startsWith('Vanity://')) {
     LunarPaths(inputVal);
   } else {
     launch(inputVal);
@@ -121,13 +121,13 @@ startInput?.addEventListener('input', function () {
 
 function LunarPaths(path: string) {
   let target = '';
-  if (path === 'lunar://apps') {
+  if (path === 'Vanity://apps') {
     inputField.value = path;
     target = './ap';
-  } else if (path === 'lunar://games') {
+  } else if (path === 'Vanity://games') {
     inputField.value = path;
     target = './gm';
-  } else if (path === 'lunar://settings') {
+  } else if (path === 'Vanity://settings') {
     inputField.value = path;
     target = './s';
   } else {
